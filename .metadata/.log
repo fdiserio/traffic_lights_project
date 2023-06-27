@@ -343,3 +343,11 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\franc\D
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-06-27 15:29:11.386
 !MESSAGE Indexed 'prova_nucleo' (22 sources, 82 headers) in 7.52 sec: 4,715 declarations; 22,504 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0073%)
+
+!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 4 0 2023-06-27 16:00:09.024
+!MESSAGE Stackanalyzer failed to analyze input
+!STACK 0
+java.lang.NullPointerException
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:912)
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1256)
+	at java.base/java.lang.Thread.run(Thread.java:829)
