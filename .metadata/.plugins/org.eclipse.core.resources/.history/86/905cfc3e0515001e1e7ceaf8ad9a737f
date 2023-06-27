@@ -83,7 +83,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	  prima_interrupt = 0;
   }
   else if (htim == &htim10){
-	  HAL_TIM_Base_Stop_IT(htim); // arresto timer watchdog
+	  HAL_TIM_Base_Stop(htim); // arresto timer watchdog
 
 	  // Spegnimento del led giallo del semaforo dritto
 	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
@@ -125,8 +125,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   HAL_TIM_Base_Stop(&htim11); // arresto timer blinking
-  HAL_TIM_Base_Stop(&htim10); // arresto temporaneamente il timer watchdog
-  htim10.Instance->CNT=0; // azzero il counter del timer watchdog
 
   // Spegnimento temporaneo di tutti i led
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
