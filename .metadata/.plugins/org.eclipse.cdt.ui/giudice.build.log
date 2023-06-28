@@ -1,0 +1,116 @@
+16:14:13 **** Incremental Build of configuration Debug for project giudice ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:223:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
+  223 |    HAL_UART_Transmit_IT(&huart4, &controllo1, 1);
+      |                                  ^~~~~~~~~~~
+      |                                  |
+      |                                  char *
+In file included from ../Core/Inc/stm32f3xx_hal_conf.h:327,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h:1488:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
+      |                                                                   ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:224:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
+  224 |    HAL_UART_Transmit_IT(&huart5, &controllo2, 1);
+      |                                  ^~~~~~~~~~~
+      |                                  |
+      |                                  char *
+In file included from ../Core/Inc/stm32f3xx_hal_conf.h:327,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h:1488:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
+      |                                                                   ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:273:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
+  273 |    HAL_UART_Transmit_IT(&huart4, &controllo1, 1);
+      |                                  ^~~~~~~~~~~
+      |                                  |
+      |                                  char *
+In file included from ../Core/Inc/stm32f3xx_hal_conf.h:327,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h:1488:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
+      |                                                                   ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c:274:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit_IT' differ in signedness [-Wpointer-sign]
+  274 |    HAL_UART_Transmit_IT(&huart5, &controllo2, 1);
+      |                                  ^~~~~~~~~~~
+      |                                  |
+      |                                  char *
+In file included from ../Core/Inc/stm32f3xx_hal_conf.h:327,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h:1488:82: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1488 | HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size);
+      |                                                                   ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
+../Core/Src/main.c:288:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive_IT' differ in signedness [-Wpointer-sign]
+  288 |    HAL_UART_Receive_IT(huart, &prenotazione1, 1);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32f3xx_hal_conf.h:327,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h:1489:75: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1489 | HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+      |                                                                  ~~~~~~~~~^~~~~
+../Core/Src/main.c:296:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive_IT' differ in signedness [-Wpointer-sign]
+  296 |    HAL_UART_Receive_IT(huart, &prenotazione2, 1);
+      |                               ^~~~~~~~~~~~~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32f3xx_hal_conf.h:327,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h:1489:75: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1489 | HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+      |                                                                  ~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:336:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive_IT' differ in signedness [-Wpointer-sign]
+  336 |   HAL_UART_Receive_IT(&huart4, &prenotazione1, 1); //mettiamo il giudice in attesa di un messaggio dal semaforo 1
+      |                                ^~~~~~~~~~~~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Inc/stm32f3xx_hal_conf.h:327,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h:1489:75: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1489 | HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+      |                                                                  ~~~~~~~~~^~~~~
+../Core/Src/main.c:337:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive_IT' differ in signedness [-Wpointer-sign]
+  337 |   HAL_UART_Receive_IT(&huart5, &prenotazione2, 1); //mettiamo il giudice in attesa di un messaggio dal semaforo 2
+      |                                ^~~~~~~~~~~~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Inc/stm32f3xx_hal_conf.h:327,
+                 from ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart.h:1489:75: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1489 | HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size);
+      |                                                                  ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "giudice.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\franc\Desktop\traffic_lights_project\giudice\STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="giudice.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: giudice.elf
+ 
+arm-none-eabi-size   giudice.elf 
+arm-none-eabi-objdump -h -S  giudice.elf  > "giudice.list"
+   text	   data	    bss	    dec	    hex	filename
+  19160	     36	   2012	  21208	   52d8	giudice.elf
+Finished building: default.size.stdout
+ 
+Finished building: giudice.list
+ 
+
+16:14:14 Build Finished. 0 errors, 8 warnings. (took 1s.72ms)
+

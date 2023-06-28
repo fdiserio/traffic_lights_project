@@ -50,7 +50,7 @@ int prima_interrupt = 1; // variabile usata per indicare se siamo alla prima int
 char richiesta = 'P'; // 'P' indica "prenotazione"
 
 char controllo; // messaggio inviato dal giudice che indica i led da accendere
-/* POSSIBILI MESSAGGI DI CONTROLLO:
+/* MESSAGGI DI CONTROLLO:
  * dritto_verde, svolta_verde, pedone_rosso: "A"
  * dritto_giallo, svolta_giallo, pedone_rosso: "B"
  * dritto_rosso, svolta_rosso, pedone_rosso: "C"
